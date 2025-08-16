@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Baloo+2:wght@400;700&family=Quicksand:wght@400;700&display=swap');
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #fce4ec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.game-container {
+    background: #fff8e1;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(248, 187, 208, 0.5);
+    width: 90%;
+    max-width: 400px;
+    border: 5px dashed #e91e63;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 95vh;
+}
+
+h1 {
+    margin-bottom: 0.5rem;
+    font-family: 'baloo', cursive;
+    font-size: 1.5rem;
+    color: #521a96;
+    text-align: center;
+}
+
+
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.speech-bubble {
+    display: inline-block;
+    background: #f8bbd0;
+    border: 3px solid #e91e63;
+    border-radius: 12px;
+    padding: 0.7rem 1rem;
+    text-align: center;
+    font-size: 1rem;
+    font-family: 'Baloo 2', cursive;
+    box-shadow: 4px 4px 0px #e91e63;
+    position: relative;
+    max-width: 90%;
+    margin-top: 0.5rem;
+}
+
+.speech-bubble:after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 20%;
+    margin-left: -15px;
+    border-width: 15px;
+    border-style: solid;
+    border-color: #f8bbd0 transparent transparent transparent;
+    transform: rotate(135deg);
+}
+
+.speech-bubble:before {
+    content: '';
+    position: absolute;
+    bottom: -18px;
+    left: 20%;
+    margin-left: -18px;
+    border-width: 18px;
+    border-style: solid;
+    border-color: #e91e63 transparent transparent transparent;
+    transform: rotate(135deg);
+}
+
+#character-img {
+    width: 180px;
+    margin-top: 0.8rem;
+}
+
+#question {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #4a148c;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#answer-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.answer-btn {
+    padding: 8px 12px;
+    font-family: 'baloo', cursive;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #4a148c;
+    background-color: #fff;
+    border: 2px solid #e91e63;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.answer-btn:hover {
+    background-color: #f8bbd0;
+    box-shadow: 0 0 8px rgba(233, 30, 99, 0.5);
+}
+
+#feedback {
+    font-weight: bold;
+    margin-top: 0.8rem;
+    font-size: 1.2rem;
+    color: #4a148c;
+    text-align: center;
+    font-family: 'Baloo 2', cursive;
+}
+
+@media (max-width: 480px) {
+    .game-container {
+        padding: 0.8rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
